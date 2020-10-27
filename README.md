@@ -1,16 +1,25 @@
 # Openweathermap by Ivan M. - test assignment
 
-This project lacks use of services and display of use case how it can be used (sorry for that). I was fullfilling the minimum requirements and some part of the code is as is and needs improvement. I will rework it, probably rewirte it from scratch with more features once I can dedicate more time to it. Angular Material is used for some basic styling and cities mat-card reordering. Angular router basic use case. 
+https://openweatherivan.web.app/
+
+Openweathermap (openweatherivan) by Ivan M. project is using openweathermap.org API to display a list of 5 European cities (you can choose the ones you prefer) as SinglePageApplication. As requested on the main screen is displayed city name, wind strength and current temperature for each of the 5 cities. By clicking on each city, a forecast temperature by hour can be viewed for the next 48hours. UI is very simple and is using Angular Material, combined with flex. Order of cities displayed can be changed by drag and drop (Material) (currently a bit buggy styling).
 
 Components:
  - WeatherCity - displays temperature by hour for selected city
- - WeatherList - displays list of 5 hardcoded cities (sry no search, adding or removing cities available at this time)
- -- Weatheritem - just styled looks for each city from WeatherList component
+ - WeatherList - displays list of 5 (hardcoded) cities (no search, adding or removing cities available at this point)
+ - - Weatheritem - just somewhat styled looks for each city from WeatherList component
 
-For the rest information take a look at this simple code.
- 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
-Upgraded to version 10
+No services currently in use, the task is simple, but this could reduce number of API calls.
+
+API calls:
+- Inital API call is GET bulk for 5 cities (later found out that it counts as 5 API calls), then for hourly for selected city another is onecall. Check openweathermap API docs for more info. This can be further improved by just using onecall for each city. Errors are not handled at this moment (this is the first thing that will be added).
+
+Angular router is used for handling navigation. A very simple use case, please view it in code (app-routing.module.ts.
+
+No guards nor injectors were used in this project.
+
+### Automatically generated  
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3. ! Upgraded to version 10
 
 ## Development server
 
@@ -24,7 +33,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-Tests are missing at this point (an attempt was made), due to some issues I ran into and lack of time (and knowledge) to work on it and resolve the issue quickly.
 
 ## Running end-to-end tests
 
