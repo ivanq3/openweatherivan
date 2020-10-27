@@ -12,7 +12,7 @@ Components:
 No services currently in use, the task is simple, but this could reduce number of API calls.
 
 API calls:
-- Inital API call is GET bulk for 5 cities (later found out that it counts as 5 API calls), then for hourly for selected city another is onecall. Check openweathermap API docs for more info. This can be further improved by just using onecall for each city. Errors are not handled at this moment (this is the first thing that will be added).
+- Inital API call is GET bulk for 5 cities (later found out that it counts as 5 API calls), then hourly for selected city is another onecall. Check openweathermap API docs for more info. This can be further improved by just using onecall for each city. Errors are not handled at this moment (this is the first thing that will be added).
 
 Angular router is used for handling navigation. A very simple use case, please view it in code (app-routing.module.ts.
 
