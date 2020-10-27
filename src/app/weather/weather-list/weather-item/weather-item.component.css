@@ -1,0 +1,39 @@
+mat-card {
+    min-width: 200px;
+    margin-bottom: 10px;
+    transition: transform .3s ease-in-out;
+    cursor: move;
+}
+
+mat-card:hover {
+    background-color: lightskyblue;
+    transform: scale(1.06);
+}
+
+#city-all {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city {
+    min-width: 100px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.wind {
+    text-align: right;
+    min-width: 50px;
+    color: gray;
+}
+
+.temperature {
+    font-size: medium;
+    text-align: right;
+    min-width: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
